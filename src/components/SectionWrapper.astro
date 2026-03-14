@@ -1,0 +1,24 @@
+---
+interface Props {
+  id?: string;
+  class?: string;
+  bg?: 'white' | 'gray' | 'dark';
+}
+
+const { id, class: className = '', bg = 'white' } = Astro.props;
+
+const bgMap = {
+  white: 'bg-white',
+  gray: 'bg-slate-50',
+  dark: 'bg-slate-900 text-white',
+};
+---
+
+<section
+  id={id}
+  class={`relative py-16 md:py-24 ${bgMap[bg]} ${className}`}
+>
+  <div class="mx-auto w-full max-w-5xl px-6">
+    <slot />
+  </div>
+</section>

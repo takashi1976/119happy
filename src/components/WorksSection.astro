@@ -1,0 +1,44 @@
+---
+import SectionWrapper from './SectionWrapper.astro';
+import SectionHeading from './SectionHeading.astro';
+
+const works = [
+  { title: '〇〇株式会社 本社移転', tag: 'オフィス移転', area: '150㎡' },
+  { title: '△△事務所 レイアウト変更', tag: 'レイアウト変更', area: '80㎡' },
+  { title: '□□法律事務所 内装工事', tag: '内装工事', area: '60㎡' },
+  { title: '◇◇商事 原状回復', tag: '原状回復', area: '200㎡' },
+  { title: '〇△事務所 新規開設', tag: 'オフィス内装', area: '120㎡' },
+  { title: '△□クリニック 移転', tag: '医療施設移転', area: '90㎡' },
+];
+---
+
+<SectionWrapper id="works" bg="white">
+  <SectionHeading title="施工実績" subtitle="Works" />
+
+  <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+    {works.map((w) => (
+      <div class="overflow-hidden rounded-xl border border-slate-200 shadow-sm">
+        <!-- Image placeholder -->
+        <div class="flex h-40 items-center justify-center bg-slate-100 text-sm text-slate-400">
+          [施工写真]
+        </div>
+        <div class="p-4">
+          <span class="inline-block rounded bg-slate-900 px-2 py-0.5 text-xs font-medium text-white">
+            {w.tag}
+          </span>
+          <p class="mt-2 text-sm font-semibold text-slate-900">{w.title}</p>
+          <p class="mt-1 text-xs text-slate-400">施工面積: {w.area}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <div class="mt-10 text-center">
+    <a
+      href="#"
+      class="inline-block rounded border border-slate-900 px-6 py-2.5 text-sm font-medium text-slate-900 transition-colors hover:bg-slate-900 hover:text-white"
+    >
+      施工実績をすべて見る
+    </a>
+  </div>
+</SectionWrapper>
