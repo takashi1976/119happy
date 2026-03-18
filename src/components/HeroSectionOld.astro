@@ -1,0 +1,43 @@
+---
+const points = [
+  {
+    text: '内装工事から\n家具の導入・買取・廃棄\n・引っ越しまでトータル対応可能',
+  },
+  {
+    text: '短納期、低単価で\n事務所家具の導入可能',
+  },
+  {
+    text: 'オフィス移転事業\n40年以上の実績と信頼',
+  },
+];
+---
+
+<section class="bg-white">
+
+  <!-- 上部アナウンスバー -->
+  <div class="bg-slate-100 py-3 text-center">
+    <p class="text-sm font-semibold text-slate-800">税理士、弁護士、司法書士の方へ</p>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <div class="mx-auto w-full max-w-5xl px-6 pt-14 pb-16">
+
+    <!-- 士業専門 -->
+    <p class="text-4xl font-black text-slate-900 md:text-5xl">士業専門</p>
+
+    <!-- メインヘッドライン -->
+    <h1 class="mt-4 text-4xl font-black leading-tight tracking-tight text-slate-900 md:text-5xl">
+      事務所づくり、レイアウト変更、引っ越し<br class="hidden md:block" />のトータルサービス
+    </h1>
+
+    <!-- 3カラムポイント -->
+    <div class="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3">
+      {points.map((p) => (
+        <div class="flex items-center justify-center rounded-lg bg-slate-100 px-6 py-8 text-center">
+          <p class="whitespace-pre-line text-sm leading-7 text-slate-700">{p.text}</p>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

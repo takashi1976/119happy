@@ -18,6 +18,7 @@
     "@tailwindcss/vite": "^4.2.1",
     "alpinejs": "^3.15.8",
     "astro": "^6.0.4",
+    "phosphor-astro": "^2.1.0",
     "tailwindcss": "^4.2.1"
   },
   "devDependencies": {

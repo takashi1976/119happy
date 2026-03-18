@@ -1,0 +1,37 @@
+---
+import SectionWrapper from './SectionWrapper.astro';
+
+const problems = [
+  '開業・独立にあたり、事務所の初期費用をできるだけ抑えたい。',
+  'クライアントのプライバシーを保ったオフィスレイアウトを提案してほしい。',
+  '書類が多く限られたスペースに効率的に収納ができない。',
+  '通信回線や電気工事、内装工事はどこに頼んだらいいかわからない',
+  '移転を検討しているが、本業が忙しくて事務所づくりに時間を割けない',
+];
+---
+
+<SectionWrapper id="problem-old" bg="gray">
+
+  <!-- 見出し -->
+  <div class="mb-10 text-center">
+    <p class="text-sm font-medium text-slate-700">事務所づくり・新設・レイアウト変更・引っ越しで</p>
+    <h2 class="mt-2 text-4xl font-black text-slate-900 md:text-5xl">こんなお悩み有りませんか？</h2>
+  </div>
+
+  <!-- 2カラム: イラスト ＋ 悩みリスト -->
+  <div class="flex flex-col gap-8 md:flex-row md:items-start">
+
+    <!-- 左: イラストプレースホルダー -->
+    <div class="flex w-full shrink-0 items-center justify-center rounded-lg bg-slate-300 md:w-2/5" style="min-height: 360px;">
+      <p class="text-center text-sm text-slate-500">悩んでいる人の<br />イラスト</p>
+    </div>
+
+    <!-- 右: 悩みリスト -->
+    <ul class="flex w-full flex-col justify-center gap-6 md:w-3/5">
+      {problems.map((text) => (
+        <li class="text-base font-bold leading-7 text-slate-900">{text}</li>
+      ))}
+    </ul>
+
+  </div>
+</SectionWrapper>

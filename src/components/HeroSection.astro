@@ -1,43 +1,92 @@
 ---
+import BuildingsDuotone from 'phosphor-astro/BuildingsDuotone.astro';
+import LightningDuotone from 'phosphor-astro/LightningDuotone.astro';
+import TrophyDuotone from 'phosphor-astro/TrophyDuotone.astro';
+
 const points = [
   {
-    text: '内装工事から\n家具の導入・買取・廃棄\n・引っ越しまでトータル対応可能',
+    num: '01',
+    text: '内装工事から家具の導入・買取<br />廃棄・引っ越しまで<strong class="text-lg lg:text-xl! px-1 text-orange-500 font-black!">トータル対応</strong>',
   },
   {
-    text: '短納期、低単価で\n事務所家具の導入可能',
+    num: '02',
+    text: '<strong class="text-lg lg:text-xl! px-1 text-orange-500 font-black!">短納期・低コスト</strong>で<br />事務所家具を迅速に導入',
   },
   {
-    text: 'オフィス移転事業\n40年以上の実績と信頼',
+    num: '03',
+    text: 'オフィス移転40年以上の<br /><strong class="text-lg lg:text-xl! px-1 text-orange-500 font-black!">実績と信頼</strong>',
   },
 ];
 ---
 
-<section class="bg-white">
+<section class="bg-[#E5E6DF] h-full min-h-[800px] ">
 
-  <!-- 上部アナウンスバー -->
-  <div class="bg-slate-100 py-3 text-center">
-    <p class="text-sm font-semibold text-slate-800">税理士、弁護士、司法書士の方へ</p>
+  <!-- アナウンスバー -->
+  <div class="bg-[#457163] py-3 text-center hidden">
+    <p class="text-sm font-semibold text-white tracking-wide">
+      税理士・弁護士・司法書士の先生専門のオフィス移転サービス
+    </p>
   </div>
 
   <!-- メインコンテンツ -->
-  <div class="mx-auto w-full max-w-5xl px-6 pt-14 pb-16">
+  <div class="mx-auto w-full max-w-[1170px] px-6 pt-16 pb-20 relative ">
+    <img src="/img/bg.png" alt="" class="absolute top-8 right-0 w-2/3 z-1 ">
 
-    <!-- 士業専門 -->
-    <p class="text-4xl font-black text-slate-900 md:text-5xl">士業専門</p>
-
-    <!-- メインヘッドライン -->
-    <h1 class="mt-4 text-4xl font-black leading-tight tracking-tight text-slate-900 md:text-5xl">
-      事務所づくり、レイアウト変更、引っ越し<br class="hidden md:block" />のトータルサービス
-    </h1>
-
-    <!-- 3カラムポイント -->
-    <div class="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3">
-      {points.map((p) => (
-        <div class="flex items-center justify-center rounded-lg bg-slate-100 px-6 py-8 text-center">
-          <p class="whitespace-pre-line text-sm leading-7 text-slate-700">{p.text}</p>
-        </div>
-      ))}
-    </div>
-
+    <div class="relative z-50"><!-- バッジ -->
+      <div class="flex flex-wrap gap-3 ">
+        <span class="inline-block rounded-full border border-[#457163] px-4 py-1 text-xs font-bold text-[#457163] tracking-wider">
+          士業専門
+        </span>
+        <span class="inline-block rounded-full border border-slate-400 px-4 py-1 text-xs font-bold text-slate-600 tracking-wider">
+          創業40年以上
+        </span>
+      </div>
+  
+      <!-- メインヘッドライン -->
+      <h1 class=" inline-block mt-6 text-4xl font-black leading-snug tracking-tight text-slate-900 md:text-6xl">
+        移転も内装も、<br />
+        <span class="text-[#457163]">すべて一社で完結。</span>
+      </h1>
+  
+      <!-- サブヘッドライン -->
+      <p class="mt-6 max-w-2xl text-base leading-8 text-slate-900 md:text-xl">
+        物件選びから内装工事・家具の調達から廃棄・引っ越しまで、<br class="hidden md:block" />
+        士業事務所の移転にかかわる<br/><strong class="text-lg lg:text-xl! px-1 text-black font-black!">全工程をワンストップで</strong>お引き受けします。
+      </p>
+  
+      <!-- CTAボタン -->
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a
+          href="#contact"
+          class="inline-flex lg:min-w-80 text-center  items-center gap-2 rounded bg-[#457163] px-8 lg:px-12 py-4 lg:py-6 text-sm lg:text-xl font-bold text-white shadow-md transition-colors hover:bg-[#365a4e]"
+        >
+          <span class=" w-full">無料相談する</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 lg:size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+    
+      </div>
+  
+      <!-- 3カラムポイント -->
+      <div class="mt-16 grid grid-cols-1 gap-4 md:grid-cols-3">
+        {points.map((p, i) => (
+          <div class="relative shadow-md overflow-hidden rounded-xl border border-slate-100 bg-slate-50 px-6 py-7">
+            <span class="absolute top-4 right-5 text-4xl font-black text-slate-200 leading-none select-none">
+              {p.num}
+            </span>
+            <div class="mb-3 text-[#457163] flex justify-center">
+              {i === 0 && <BuildingsDuotone width={44} height={44} />}
+              {i === 1 && <LightningDuotone width={44} height={44} />}
+              {i === 2 && <TrophyDuotone width={44} height={44} />}
+            </div>
+            <p
+              class="relative text-sm lg:text-base leading-7 text-slate-900 font-bold text-center"
+              set:html={p.text}
+            />
+          </div>
+        ))}
+      </div>
+  </div>
   </div>
 </section>
