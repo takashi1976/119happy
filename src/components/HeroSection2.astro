@@ -1,0 +1,100 @@
+---
+const points = [
+  {
+    iconPath:
+      'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6',
+    text: '内装工事から家具の導入・買取・廃棄・引っ越しまで<span class="text-[#457163]">トータル対応可能</span>',
+  },
+  {
+    iconPath: 'M13 10V3L4 14h7v7l9-11h-7z',
+    text: '<span class="text-[#457163]">短納期、低単価</span>で事務所家具の導入可能',
+  },
+  {
+    iconPath:
+      'M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z',
+    text: 'オフィス移転事業<span class="text-[#457163]">40年以上の実績と信頼</span>',
+  },
+];
+---
+
+<section class="relative overflow-hidden bg-[#F5F5F0]">
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute  flex items-center top-10 h-full right-0 z-1 w-full max-w-[1000px]"
+    style="aspect-ratio: 500 / 331;"
+  >
+    <div
+      class="h-full border-4 absolute bottom-4 right-4 w-full z-0"
+      style="
+        background-image: url('/img/bg_original.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        -webkit-mask-image: url('/img/shape.svg');
+        mask-image: url('/img/shape.svg');
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        -webkit-mask-size: 88%;
+        mask-size: 88%;
+        -webkit-mask-mode: alpha;
+        mask-mode: alpha;
+      "
+    ></div>
+  </div>
+ <!-- アナウンスバー -->
+  <div class="bg-[#457163] py-2.5 text-center relative z-10">
+    <p class="text-sm font-bold text-white tracking-wide">
+      税理士、弁護士、司法書士の方へ
+    </p>
+  </div>
+
+  <div class="mx-auto w-full max-w-[1170px] px-6 pt-14 pb-20 relative z-10">
+
+    <!-- バッジ -->
+    <div class="flex flex-wrap gap-3 z-10 relative">
+      <span class="inline-block rounded-full border-2 border-[#457163] bg-[#457163] px-5 py-1.5 text-sm font-bold text-white tracking-wider">
+        士業専門
+      </span>
+    </div>
+
+    <!-- メインヘッドライン -->
+    <h1 class="mt-5 text-3xl font-black leading-snug tracking-tight text-slate-900 md:text-3xl lg:text-5xl">
+      事務所づくり、レイアウト変更、<br />引っ越しの<span class="text-[#457163]">トータルサービス</span>
+    </h1>
+
+    <!-- サブテキスト -->
+    <p class="mt-5 max-w-2xl text-base leading-8 text-slate-600 md:text-lg">
+      内装工事から家具の調達・廃棄・引っ越しまで、<br class="hidden md:block" />
+      士業事務所に関わる全工程をワンストップでお任せください。
+    </p>
+
+    <!-- CTAボタン -->
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a
+        href="#contact"
+        class="inline-flex items-center gap-2 rounded bg-[#457163] px-10 py-4 text-base font-bold text-white shadow transition-colors hover:bg-[#365a4e] lg:text-xl"
+      >
+      無料相談・お見積り
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+
+    <!-- 3カラムポイント -->
+    <div class="mt-10 grid grid-cols-3 gap-4 sm:grid-cols-1 w-full max-w-[700px]">
+      {points.map((point) => (
+        <div class="rounded-xl border flex items-center border-slate-200 bg-white/80 backdrop-blur-lg  px-4 py-4 shadow-sm text-center">
+          <div class="mb-0 flex size-12 shrink-0 items-center justify-center rounded-full bg-[#457163]/10 text-[#457163]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="size-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d={point.iconPath} />
+            </svg>
+          </div>
+          <p class="text-base font-bold leading-6 text-slate-800  w-full text-left pl-4" set:html={point.text}></p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -4,27 +4,27 @@ import SectionWrapper from './SectionWrapper.astro';
 const problems = [
   {
     num: '1',
-    text: '開業・独立にあたり、事務所の\n初期費用をできるだけ抑えたい。',
+    text: '開業・独立にあたり、事務所の<br />初期費用を<strong class="marker text-lg lg:text-xl! px-1 text-black font-black! relative">できるだけ抑えたい</strong>。',
     keyword: '初期費用',
   },
   {
     num: '2',
-    text: 'クライアントのプライバシーを保てる\nオフィスレイアウトにしたい。',
+    text: 'クライアントの<strong class="marker text-lg lg:text-xl! px-1 text-black font-black!">プライバシーを保てる</strong><br />オフィスレイアウトにしたい。',
     keyword: 'プライバシー',
   },
   {
     num: '3',
-    text: '書類が多く、限られたスペースに\n効率よく収納できていない。',
+    text: '書類が多く、限られたスペースに<br /><strong class="marker text-lg lg:text-xl! px-1 text-black font-black!">効率よく収納できていない</strong>。',
     keyword: '収納',
   },
   {
     num: '4',
-    text: '通信回線・電気工事・内装工事など、\nどこへ頼めばいいかわからない。',
+    text: '通信回線・電気工事・内装工事など、<br /><strong class="marker text-lg lg:text-xl! px-1 text-black font-black!">どこへ頼めばいいか</strong>わからない。',
     keyword: '窓口の多さ',
   },
   {
     num: '5',
-    text: '移転を検討しているが、本業が忙しくて\n事務所づくりに時間を割けない。',
+    text: '移転を検討しているが、本業が忙しくて<br />事務所づくりに<strong class="marker text-lg lg:text-xl! px-1 text-black font-black!">時間を割けない</strong>。',
     keyword: '時間がない',
   },
 ];
@@ -68,7 +68,7 @@ const problems = [
         />
       </div>
 
-      <ul class=" w-full grid grid-cols-2 gap-6 -mt-8 max-w-[900px] mx-auto relative z-20 ">
+      <ul class=" w-full grid grid-cols-2 gap-6 -mt-8 max-w-[940px] mx-auto relative z-20 ">
        
         {problems.map((p, index) => (
           <li class={`relative overflow-hidden_ rotate-2 rounded-2xl border border-slate-200/80 bg-slate-50 px-8 pl-24 py-6 shadow-md ${index === problems.length - 1 ? 'translate-x-1/2' : ''}`}>
@@ -78,9 +78,7 @@ const problems = [
             <span class="inline-flex  relative z-1   text-xl lg:text-2xl font-black tracking-wide text-[#457163]">
               #{p.keyword}
             </span>
-            <p class="relative mt-0 whitespace-pre-line text-sm font-bold leading-6 text-slate-600 md:text-base">
-              {p.text}
-            </p>
+            <p class="relative mt-0 text-sm font-bold leading-6 text-slate-600 md:text-base" set:html={p.text}></p>
           </li>
         ))}
       </ul>

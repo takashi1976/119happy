@@ -1,0 +1,99 @@
+---
+---
+
+<section class="relative min-h-[400px] overflow-hidden bg-[#F5F5F0] p-10">
+
+  <!-- マスク検証: shape.svg + bg_original.png -->
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute top-0 left-0 z-0 w-[min(72vw,540px)]"
+    style="aspect-ratio: 500 / 331;"
+  >
+    <div
+      class="h-full w-full"
+      style="
+        background-image: url('/img/bg_original.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        -webkit-mask-image: url('/img/shape.svg');
+        mask-image: url('/img/shape.svg');
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-mode: alpha;
+        mask-mode: alpha;
+      "
+    ></div>
+  </div>
+
+  <!-- 確認テキスト -->
+  <div class="relative z-10 text-slate-700">
+    <p class="font-bold">背景画像（bg_original.png）をシェイプマスク（shape.svg）で切り抜き</p>
+    <p class="mt-2 text-sm">↑ 左側に画像がシェイプ形状で表示されるはず</p>
+  </div>
+
+  <!-- 以下は個別パーツの単体確認 -->
+  <div class="relative z-10 mt-80 flex gap-8 flex-wrap">
+
+
+    <!-- 1: 画像だけ（マスクなし） -->
+    <div>
+      <p class="mb-2 text-xs font-bold text-slate-500">① bg_original.png（マスクなし）</p>
+      <div class="h-40 w-60 border border-slate-300"
+        style="background-image: url('/img/bg_original.png'); background-size: cover; background-position: center;"></div>
+    </div>
+
+    <!-- 2: shape.svg だけ（imgタグ） -->
+    <div>
+      <p class="mb-2 text-xs font-bold text-slate-500">② shape.svg（imgタグ）</p>
+      <img src="/img/shape.svg" class="h-40 w-60 border border-slate-300 bg-white" alt="shape" />
+    </div>
+
+    <!-- 3: mask-mode: luminance（デフォルト動作確認） -->
+    <div>
+      <p class="mb-2 text-xs font-bold text-slate-500">③ mask-mode: luminance</p>
+      <div
+        class="h-40 w-60"
+        style="
+          background-image: url('/img/bg_original.png');
+          background-size: cover;
+          background-position: center;
+          -webkit-mask-image: url('/img/shape.svg');
+          mask-image: url('/img/shape.svg');
+          -webkit-mask-size: contain;
+          mask-size: contain;
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+          -webkit-mask-mode: luminance;
+          mask-mode: luminance;
+        "
+      ></div>
+    </div>
+
+    <!-- 4: mask-mode: alpha -->
+    <div>
+      <p class="mb-2 text-xs font-bold text-slate-500">④ mask-mode: alpha</p>
+      <div
+        class="h-40 w-60"
+        style="
+          background-image: url('/img/bg_original.png');
+          background-size: cover;
+          background-position: center;
+          -webkit-mask-image: url('/img/shape.svg');
+          mask-image: url('/img/shape.svg');
+          -webkit-mask-size: contain;
+          mask-size: contain;
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+          -webkit-mask-mode: alpha;
+          mask-mode: alpha;
+        "
+      ></div>
+    </div>
+
+  </div>
+</section>

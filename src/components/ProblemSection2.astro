@@ -1,0 +1,75 @@
+---
+import SectionWrapper from './SectionWrapper.astro';
+
+const problems = [
+  '開業・独立にあたり、事務所の初期費用をできるだけ抑えたい。',
+  'クライアントのプライバシーを保ったオフィスレイアウトを提案してほしい。',
+  '書類が多く限られたスペースに効率的に収納ができない。',
+  '通信回線や電気工事、内装工事はどこに頼んだらいいかわからない',
+  '移転を検討しているが、本業が忙しくて事務所づくりに時間を割けない',
+];
+---
+
+<SectionWrapper bg="white">
+  <img
+    slot="background"
+    src="/img/AdobeStock_1392396561.jpeg"
+    class="absolute left-0 top-0 h-full w-full object-cover opacity-40 mix-blend-multiply"
+    alt=""
+  />
+
+    <!-- ラベル -->
+    <p class="text-center text-sm font-bold tracking-widest text-[#457163] relative z-10">
+      事務所づくり・新設・レイアウト変更・引っ越しで
+    </p>
+
+    <!-- 見出し -->
+    <h2 class="mt-3 text-center text-3xl font-black leading-snug tracking-tight text-slate-900 md:text-5xl relative z-10">
+      こんなお悩み<span class="text-[#457163]">有りませんか？</span>
+    </h2>
+
+    <!-- 本文＋イラスト -->
+    <div class="mt-12 flex flex-col items-center gap-10 lg:flex-row lg:items-start lg:gap-16 relative z-10" >
+
+      <!-- イラスト -->
+      <div class="shrink-0">
+        <img src="/img/nayami.png" alt="悩んでいる人のイラスト" class="w-64 lg:w-64" />
+      </div>
+
+      <!-- お悩みリスト -->
+      <ul class="flex w-full flex-col gap-4">
+        {problems.map((problem, index) => (
+          <li class="flex items-start gap-4 rounded-xl border border-slate-100 bg-white shadow-sm px-6 py-5">
+            <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#457163] text-xs font-black text-white">
+              {index + 1}
+            </span>
+            <p class="text-sm font-bold leading-7 text-slate-700 md:text-base">
+              {problem}
+            </p>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- 解決バナー -->
+    <div class="mt-12 flex items-center justify-between gap-6 rounded-2xl bg-[#457163]/90 px-8 py-8 text-white relative z-10">
+      <img src="/img/good1.png" alt="" class="hidden w-36 lg:block" />
+      <div class="text-center flex-1">
+        <p class="text-xl font-black leading-snug md:text-2xl lg:text-3xl">
+          そのお悩み、<br />
+          オフィスレスキュー119 Happyが<br />
+          <span class="text-[#C5DDD5]">まとめて解決</span>します。
+        </p>
+        <a
+          href="#contact"
+          class="mt-6 inline-flex items-center gap-2 rounded bg-white px-7 py-3 text-sm font-bold text-[#457163] transition-colors hover:bg-[#f0f5f3] lg:text-base"
+        >
+          無料相談・お見積り
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+      <img src="/img/good2.png" alt="" class="hidden w-36 lg:block" />
+    </div>
+</SectionWrapper>
