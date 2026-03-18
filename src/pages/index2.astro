@@ -1,17 +1,27 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
-import HeroSection2 from '../components/HeroSection2.astro';
-import ProblemSection2 from '../components/ProblemSection2.astro';
-import Footer2 from '../components/Footer2.astro';
+import HeroSection from '../components/HeroSection.astro';
+import ProblemSection from '../components/ProblemSection.astro';
+import ServiceSection from '../components/ServiceSection.astro';
+import FeatureSection from '../components/FeatureSection.astro';
+import WorksSection from '../components/WorksSection.astro';
+import ReasonSection from '../components/ReasonSection.astro';
+import CtaSection from '../components/CtaSection.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <BaseLayout
-  title="株式会社トミザワ | 士業専門 事務所づくりのトータルサービス"
-  description="士業専門の株式会社トミザワは、事務所づくり・レイアウト変更・引っ越しをトータルでご提供します。"
+  title="株式会社トミザワ | 事務所づくり・オフィス移転のトータルサービス"
+  description="土壁専門の株式会社トミザワは、オフィス内装工事・レイアウト変更・移転サポートをトータルでご提供します。"
 >
   <Header />
-  <HeroSection2 />
-  <ProblemSection2 />
- <!--  <Footer2 />  -->
+ 
+  <HeroSection />
+  <ProblemSection />
+ <!--  <ServiceSection />
+  <FeatureSection />
+  <WorksSection />
+  <ReasonSection />
+  <CtaSection />  <Footer /> -->
 </BaseLayout>

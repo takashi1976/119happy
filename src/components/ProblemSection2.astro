@@ -2,11 +2,11 @@
 import SectionWrapper from './SectionWrapper.astro';
 
 const problems = [
-  '開業・独立にあたり、事務所の初期費用をできるだけ抑えたい。',
-  'クライアントのプライバシーを保ったオフィスレイアウトを提案してほしい。',
-  '書類が多く限られたスペースに効率的に収納ができない。',
-  '通信回線や電気工事、内装工事はどこに頼んだらいいかわからない',
-  '移転を検討しているが、本業が忙しくて事務所づくりに時間を割けない',
+  '開業・独立にあたり、事務所の<strong class="px-2 text-lg font-black text-[#457163] md:text-xl">初期費用をできるだけ抑えたい</strong>。',
+  'クライアントのプライバシーを保ったオフィスレイアウトを<strong class="px-2 text-lg font-black text-[#457163] md:text-xl">提案してほしい。</strong>',
+  '書類が多く限られたスペースに<strong class="px-2 text-lg font-black text-[#457163] md:text-xl">効率的に収納ができない</strong>。',
+  '通信回線や電気工事、内装工事は<strong class="px-2 text-lg font-black text-[#457163] md:text-xl">どこに頼んだらいいか</strong>わからない',
+  '移転を検討しているが、本業が忙しくて<strong class="px-2 text-lg font-black text-[#457163] md:text-xl">事務所づくりに時間を割けない</strong>',
 ];
 ---
 
@@ -24,7 +24,7 @@ const problems = [
     </p>
 
     <!-- 見出し -->
-    <h2 class="mt-3 text-center text-3xl font-black leading-snug tracking-tight text-slate-900 md:text-5xl relative z-10">
+    <h2 class="mt-3 text-center text-3xl font-black leading-snug tracking-wider text-slate-900 md:text-5xl relative z-10">
       こんなお悩み<span class="text-[#457163]">有りませんか？</span>
     </h2>
 
@@ -43,19 +43,17 @@ const problems = [
             <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#457163] text-xs font-black text-white">
               {index + 1}
             </span>
-            <p class="text-sm font-bold leading-7 text-slate-700 md:text-base">
-              {problem}
-            </p>
+            <p set:html={problem} class="text-sm font-bold leading-7 text-slate-700 md:text-base" />
           </li>
         ))}
       </ul>
     </div>
 
     <!-- 解決バナー -->
-    <div class="mt-12 flex items-center justify-between gap-6 rounded-2xl bg-[#457163]/90 px-8 py-8 text-white relative z-10">
-      <img src="/img/good1.png" alt="" class="hidden w-36 lg:block" />
-      <div class="text-center flex-1">
-        <p class="text-xl font-black leading-snug md:text-2xl lg:text-3xl">
+    <div class="mt-12 flex items-center justify-center gap-6 rounded-2xl bg-[#457163]/90 px-8 py-8 pb-0 text-white relative z-10">
+      <img src="/img/good1.png" alt="" class="hidden w-50 flex-0 lg:block " />
+      <div class="text-center flex-0 ">
+        <p class="text-xl font-black leading-snug md:text-2xl lg:text-3xl whitespace-nowrap">
           そのお悩み、<br />
           オフィスレスキュー119 Happyが<br />
           <span class="text-[#C5DDD5]">まとめて解決</span>します。
@@ -70,6 +68,6 @@ const problems = [
           </svg>
         </a>
       </div>
-      <img src="/img/good2.png" alt="" class="hidden w-36 lg:block" />
+      <img src="/img/good2.png" alt="" class="hidden w-50 flex-0 lg:block " />
     </div>
 </SectionWrapper>
