@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 
 interface Props {
   title?: string;
@@ -7,8 +7,8 @@ interface Props {
 }
 
 const {
-  title = '株式会社トミザワ',
-  description = '株式会社トミザワ ランディングページ'
+  title = "株式会社トミザワ",
+  description = "株式会社トミザワ ランディングページ"
 } = Astro.props;
 ---
 
@@ -23,15 +23,17 @@ const {
     <link rel="icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet" />
-    <title>{title}_</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
   </head>
+
   <body class="min-h-screen bg-[#E5E6DF] text-slate-900 antialiased">
     <slot />
-
     <script>
-      import Alpine from 'alpinejs';
-
+      import Alpine from "alpinejs";
       window.Alpine = Alpine;
       Alpine.start();
     </script>
