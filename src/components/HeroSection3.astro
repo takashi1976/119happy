@@ -1,0 +1,85 @@
+---
+import BuildingsDuotone from 'phosphor-astro/BuildingsDuotone.astro';
+import LightningDuotone from 'phosphor-astro/LightningDuotone.astro';
+import TrophyDuotone from 'phosphor-astro/TrophyDuotone.astro';
+import heroBackground from '../../materials/AdobeStock_684911866.jpeg';
+
+const points = [
+  {
+    num: '01',
+    text: '内装工事から家具の導入・買取<br />廃棄・引っ越しまで<strong class="marker text-lg lg:text-xl! px-1 text-black font-black!">トータル対応</strong>',
+  },
+  {
+    num: '02',
+    text: '<strong class="marker text-lg lg:text-xl! px-1 text-black font-black!">短納期・低コスト</strong>で<br />事務所家具を迅速に導入',
+  },
+  {
+    num: '03',
+    text: 'オフィス移転40年以上の<br /><strong class="marker text-lg lg:text-xl! px-1 text-black font-black!">実績と信頼</strong>',
+  },
+];
+---
+
+<section class="relative isolate flex min-h-[calc(100vh-4rem)] items-center overflow-hidden bg-slate-900">
+  <img
+    src={heroBackground.src}
+    alt=""
+    aria-hidden="true"
+    class="absolute inset-0 h-full w-full object-cover object-center"
+  />
+
+
+  <div class="relative z-10 mx-auto w-full max-w-[1170px] px-6 py-16 md:py-24">
+    <div class="max-w-3xl">
+      <div class="flex flex-wrap gap-3">
+        <span class="inline-block rounded-full border border-white/60 bg-white/10 px-4 py-1 text-xs font-bold tracking-wider text-white backdrop-blur-sm">
+          士業専門
+        </span>
+        <span class="inline-block rounded-full border border-white/30 bg-black/15 px-4 py-1 text-xs font-bold tracking-wider text-white/90 backdrop-blur-sm">
+          創業40年以上
+        </span>
+      </div>
+
+      <h1 class="mt-6 inline-block text-4xl font-black leading-snug tracking-tight text-white md:text-6xl">
+        <span class="text-black bg-white">移転も内装も、</span><br />
+        <span class="text-[#457163] bg-white">すべて一社で完結。</span>
+      </h1>
+
+      <p class="mt-6 max-w-2xl text-base leading-8 text-white/95 md:text-xl">
+        物件選びから内装工事・家具の調達から廃棄・引っ越しまで、<br class="hidden md:block" />
+        士業事務所の移転にかかわる<br /><strong class="text-lg lg:text-2xl! px-1 font-black text-white">全工程をワンストップで</strong>お引き受けします。
+      </p>
+
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a
+          href="#contact"
+          class="inline-flex items-center gap-2 rounded bg-[#457163] px-8 py-4 text-sm font-bold text-white shadow-lg transition-colors hover:bg-[#365a4e] lg:min-w-80 lg:px-12 lg:py-6 lg:text-xl"
+        >
+          <span class="w-full text-center">無料相談・お見積り</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 lg:size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-16 grid grid-cols-1 gap-4 md:grid-cols-3">
+      {points.map((point, index) => (
+        <div class="relative overflow-hidden rounded-xl border border-white/20 bg-white/88 px-6 py-7 shadow-xl backdrop-blur-sm">
+          <span class="absolute top-4 right-5 text-4xl leading-none font-black text-slate-200 select-none">
+            {point.num}
+          </span>
+          <div class="mb-3 flex justify-center text-[#457163]">
+            {index === 0 && <BuildingsDuotone width={44} height={44} />}
+            {index === 1 && <LightningDuotone width={44} height={44} />}
+            {index === 2 && <TrophyDuotone width={44} height={44} />}
+          </div>
+          <p
+            class="relative text-center text-sm leading-7 font-bold text-slate-900 lg:text-base"
+            set:html={point.text}
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
