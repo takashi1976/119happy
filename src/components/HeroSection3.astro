@@ -1,96 +1,153 @@
 ---
-import BuildingsDuotone from 'phosphor-astro/BuildingsDuotone.astro';
-import LightningDuotone from 'phosphor-astro/LightningDuotone.astro';
-import TrophyDuotone from 'phosphor-astro/TrophyDuotone.astro';
-import heroBackground from '../../public/img/AdobeStock_684911866.jpeg';
-
+import BuildingsDuotone from "phosphor-astro/BuildingsDuotone.astro";
+import LightningDuotone from "phosphor-astro/LightningDuotone.astro";
+import TrophyDuotone from "phosphor-astro/TrophyDuotone.astro";
+import heroBackground from "../../public/img/AdobeStock_684911866.jpeg";
 
 const points2 = [
   {
     iconPath:
-      'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6',
-    text: '内装工事から家具の導入・買取・廃棄・引っ越しまで<span class="text-[#457163]">トータル対応可能</span>',
+      "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6",
+    text: '内装工事から家具の導入・買取・廃棄・<br />引っ越しまで<span class="text-[#457163]">トータル対応可能</span>'
   },
   {
-    iconPath: 'M13 10V3L4 14h7v7l9-11h-7z',
-    text: '<span class="text-[#457163]">短納期、低単価</span>で事務所家具の導入可能',
+    iconPath: "M13 10V3L4 14h7v7l9-11h-7z",
+    text: '<span class="text-[#457163]">短納期、低単価</span>で事務所家具の導入可能'
   },
   {
     iconPath:
-      'M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z',
-    text: 'オフィス移転事業<span class="text-[#457163]">40年以上の実績と信頼</span>',
-  },
+      "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z",
+    text: 'オフィス移転事業<span class="text-[#457163]">40年以上の実績と信頼</span>'
+  }
 ];
 
 const points = [
   {
-    num: '01',
-    text: '内装工事から家具の導入・買取<br />廃棄・引っ越しまで<strong class="marker text-lg lg:text-xl! px-1 text-black font-black!">トータル対応</strong>',
+    num: "01",
+    text: '内装工事から家具の導入・買取<br />廃棄・引っ越しまで<strong class="marker text-lg lg:text-xl! px-1 text-black font-black!">トータル対応</strong>'
   },
   {
-    num: '02',
-    text: '<strong class="marker text-lg lg:text-xl! px-1 text-black font-black!">短納期・低コスト</strong>で<br />事務所家具を迅速に導入',
+    num: "02",
+    text: '<strong class="marker text-lg lg:text-xl! px-1 text-black font-black!">短納期・低コスト</strong>で<br />事務所家具を迅速に導入'
   },
   {
-    num: '03',
-    text: 'オフィス移転40年以上の<br /><strong class="marker text-lg lg:text-xl! px-1 text-black font-black!">実績と信頼</strong>',
-  },
+    num: "03",
+    text: 'オフィス移転40年以上の<br /><strong class="marker text-lg lg:text-xl! px-1 text-black font-black!">実績と信頼</strong>'
+  }
 ];
 ---
 
-<section class="relative min-h-[800px] overflow-hidden bg-[#E5E6DF]">
+<section
+  class="relative min-h-[800px] overflow-hidden bg-[#E5E6DF] flex items-center"
+>
   <img
     src={heroBackground.src}
     alt=""
     aria-hidden="true"
-    class="absolute inset-0 h-full w-full object-cover object-center "
+    class="absolute inset-0 h-full w-full object-cover object-center"
   />
 
-  <div class="mx-auto w-full max-w-[1410px] px-6 pt-16 pb-20 relative">
+  <div class="mx-auto w-full h-full max-w-[1210px] px-6 pt-16 pb-0 relative">
     <div class="relative z-50">
-      <div class="flex flex-wrap gap-3 ">
-        <span class="inline-block rounded-full border border-[#457163] px-4 py-1 text-xs font-bold text-[#457163] tracking-wider">
-          士業専門
-        </span>
-        <span class="inline-block rounded-full border border-slate-400 px-4 py-1 text-xs font-bold text-slate-600 tracking-wider">
-          創業40年以上
-        </span>
+      <div
+        class="flex flex-wrap gap-3 z-10 relative text-xl font-bold justify-start text-gray-700"
+      >
+        <p class="relative">
+          <img
+            src="/img/senmon4.png"
+            alt=""
+            class="w-24 absolute top-0 left-4 -translate-x-full -translate-y-full m-rotate-10"
+          />
+          <span class="inline-block scale-x-[-1]">/</span>
+          <span class="px-2 leading-0 -pb-2 bg-red-200 inline-block">
+            税理士、弁護士、司法書士の方へ
+          </span>
+          <span>/</span>
+        </p>
       </div>
 
-      <h1 class=" inline-block mt-6 text-4xl font-black leading-snug tracking-tight text-slate-900 md:text-6xl">
-        <span class="text-black bg-white">移転も内装も、</span><br />
-        <span class="text-[#457163] bg-white">すべて一社で完結。</span>
+      <h1
+        class="inline-block mt-4 text-4xl font-black -translate-x-16 leading-snug tracking-tight text-slate-900 md:text-5xl"
+      >
+        <span
+          class="text-black bg-white pl-8 pr-4 py-2 rounded-sm inline-block translate-y-4"
+        >
+          移転も内装も、
+        </span><br />
+        <span
+          class="text-[#457163] bg-white pl-8 pr-4 inline-block translate-x-16 mt-2 py-2 rounded-sm"
+        >
+          すべて一社で完結。
+        </span>
       </h1>
 
-     <div> <p class="mt-6 max-w-2xl inline-block text-base  leading-8 text-black font-bold md:text-xl backdrop-blur-sm">
-      物件選びから内装工事・家具の調達から<br />廃棄・引っ越しまで、
-      士業事務所の移転にかかわる<br /><strong class="text-lg lg:text-2xl! px-1 text-black marker font-black!">全工程をワンストップで</strong>お引き受けします。
-    </p></div>
+      <div>
+        <p
+          class="mt-3 max-w-2xl inline-block text-base leading-8 text-black font-bold md:text-lg"
+        >
+          物件選びから内装工事・家具の調達から<br />廃棄・引っ越しまで、
+          士業事務所の移転にかかわる<br /><strong
+            class="text-lg lg:text-xl! px-1 text-black marker font-black!"
+          >
+            全工程をワンストップで
+          </strong>お引き受けします。
+        </p>
+      </div>
 
-      <div class="mt-10 flex flex-wrap gap-4">
+      <div class="mt-8 flex flex-wrap gap-4">
         <a
           href="#contact"
-          class="inline-flex lg:min-w-80 text-center  items-center gap-2 rounded- bg-[#457163] px-8 lg:px-12 py-4 lg:py-6 text-sm lg:text-xl font-bold text-white shadow-md transition-colors hover:bg-[#365a4e]"
+          class="inline-flex lg:min-w-80 text-center items-center gap-2 rounded- bg-[#457163] px-8 lg:px-12 py-4 lg:py-4 text-sm lg:text-xl font-bold text-white shadow-md transition-colors hover:bg-[#365a4e]"
         >
-          <span class=" w-full">無料相談・お見積り</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 lg:size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          <span class="w-full">無料相談・お見積り</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4 lg:size-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2.5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 5l7 7-7 7"
+            >
+            </path>
           </svg>
         </a>
       </div>
     </div>
 
-    <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-1 max-w-[500px]">
-      {points2.map((point) => (
-        <div class="rounded-xl_ border flex items-center border-slate-200 bg-white/80 backdrop-blur-lg  px-4 py-4 shadow-sm text-center">
-          <div class="mb-0 flex size-12 shrink-0 items-center justify-center rounded-full bg-[#457163]/10 text-[#457163]">
-            <svg xmlns="http://www.w3.org/2000/svg" class="size-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d={point.iconPath} />
-            </svg>
+    <div
+      class="mt-10 grid grid-cols-1 gap-2 md:grid-cols-1 gap-4 max-w-[500px]"
+    >
+      {
+        points2.map((point) => (
+          <div class="rounded-xl_  flex items-center border-slate-200     text-center">
+            <div class="mb-0 flex size-12 shrink-0 items-center justify-center rounded-full bg-[#457163] text-[#fff]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d={point.iconPath}
+                />
+              </svg>
+            </div>
+            <p
+              class="text-base font-bold leading-6 text-slate-800  w-full text-left pl-4"
+              set:html={point.text}
+            />
           </div>
-          <p class="text-base font-bold leading-6 text-slate-800  w-full text-left pl-4" set:html={point.text}></p>
-        </div>
-      ))}
+        ))
+      }
     </div>
   </div>
 </section>
