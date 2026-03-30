@@ -1,26 +1,34 @@
 ---
-import SectionWrapper from './SectionWrapper.astro';
+import SectionWrapper from "./SectionWrapper2.astro";
 
 const services = [
-  '内装デザイン設計',
-  'レイアウト\n家具コーディネート',
-  '不用品の買取・処分',
-  '事務所家具の導入',
-  '家具の運搬\n組立・設置',
-  '内装設備工事\nサイン施工',
-  '通信回線\n電気工事',
-  '複合機\nビジネスフォン\nの導入',
-  '引っ越し業務',
+  "内装デザイン設計",
+  "レイアウト\n家具コーディネート",
+  "不用品の買取・処分",
+  "事務所家具の導入",
+  "家具の運搬\n組立・設置",
+  "内装設備工事\nサイン施工",
+  "通信回線\n電気工事",
+  "複合機\nビジネスフォン\nの導入",
+  "引っ越し業務"
 ];
 ---
 
-<SectionWrapper id="service" class="bg-[#e8f5e4]">
-
+<SectionWrapper
+  id="service"
+  class="bg-[#e8f5e4] !py-0 !w-full border-yellow-500 !max-w-full border"
+>
   <!-- 見出し -->
-  <div class="mb-8 text-center">
-    <h2 class="text-3xl font-black text-slate-900 md:text-4xl">事務所づくりを一気通貫で対応可能</h2>
+  <div class="mb-8 text-center border border-red-500 w-full min-w-full">
+    <h2
+      class="text-3xl font-black text-white py-8 bg-[#457163] rounded-xl md:text-4xl w-full"
+    >
+      事務所づくりを一気通貫で対応可能
+    </h2>
     <p class="mt-6 text-sm leading-7 text-slate-700">
-      事務所の内装デザイン・設計、家具選定、施工工事、電話回線工事、から家具の組み立て設置、<br class="hidden md:block" />
+      事務所の内装デザイン・設計、家具選定、施工工事、電話回線工事、から家具の組み立て設置、<br
+        class="hidden md:block"
+      />
       引っ越しサポートまで、事務所づくりに必要なすべてをトータルでご提供。
     </p>
     <p class="mt-6 text-base font-medium text-slate-800">
@@ -31,11 +39,14 @@ const services = [
 
   <!-- 3×3 サービスグリッド -->
   <div class="grid grid-cols-3 gap-4">
-    {services.map((name) => (
-      <div class="flex items-center justify-center rounded-2xl bg-white px-4 py-8 text-center shadow-sm">
-        <p class="whitespace-pre-line text-base font-bold text-slate-900">{name}</p>
-      </div>
-    ))}
+    {
+      services.map((name) => (
+        <div class="flex items-center justify-center rounded-2xl bg-white px-4 py-8 text-center shadow-sm">
+          <p class="whitespace-pre-line text-base font-bold text-slate-900">
+            {name}
+          </p>
+        </div>
+      ))
+    }
   </div>
-
 </SectionWrapper>
