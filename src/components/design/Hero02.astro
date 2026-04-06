@@ -1,0 +1,97 @@
+---
+import BuildingsDuotone from "phosphor-astro/BuildingsDuotone.astro";
+import LightningDuotone from "phosphor-astro/LightningDuotone.astro";
+import TrophyDuotone from "phosphor-astro/TrophyDuotone.astro";
+
+const points2 = [
+  {
+    iconPath:
+      "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6",
+    text: '内装工事から家具の導入・買取・廃棄・<br />引っ越しまで<span class="text-[#7BB2A2]">トータル対応可能</span>'
+  },
+  {
+    iconPath: "M13 10V3L4 14h7v7l9-11h-7z",
+    text: '<span class="text-[#7BB2A2]">短納期、低単価</span>で事務所家具の導入可能'
+  },
+  {
+    iconPath:
+      "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z",
+    text: 'オフィス移転事業<span class="text-[#7BB2A2]">40年以上の実績と信頼</span>'
+  }
+];
+
+const points = [
+  {
+    num: "01",
+    text: '内装工事から家具の導入・買取<br />廃棄・引っ越しまで<strong class="marker text-lg lg:text-xl! px-1 text-black font-black!">トータル対応</strong>'
+  },
+  {
+    num: "02",
+    text: '<strong class="marker text-lg lg:text-xl! px-1 text-black font-black!">短納期・低コスト</strong>で<br />事務所家具を迅速に導入'
+  },
+  {
+    num: "03",
+    text: 'オフィス移転40年以上の<br /><strong class="marker text-lg lg:text-xl! px-1 text-black font-black!">実績と信頼</strong>'
+  }
+];
+---
+
+<section
+  class="relative h-svh max-h-[800px] overflow-hidden bg-[#E5E6DF] flex items-center"
+>
+  <img
+    src="/img/AdobeStock_684911866.jpeg"
+    alt=""
+    aria-hidden="true"
+    class="absolute inset-0 h-full w-full object-cover object-center"
+  />
+
+  <div
+    class="mx-auto w-full h-full max-w-[1440px] px-6 pt-0 pb-0 relative flex items-center"
+  >
+    <div class="relative z-50">
+      <div
+        class="flex flex-wrap gap-3 z-10 relative text-3xl font-bold justify-start text-gray-700 mb-6"
+      >
+        <div class="relative bg-[#466C61] p-4 px-6 z-10 rounded-sm">
+          <img
+            src="/img/senmon3.png"
+            alt=""
+            class="absolute top-0 -left-4 -translate-y-[85%] -rotate-4 w-28"
+          />
+          <p class="px-2 leading-0 -pb-2 inline-block text-white relative">
+            税理士、弁護士、司法書士の方へ
+          </p>
+        </div>
+      </div>
+
+      <h1
+        class="bg-white font-noto border-[#466C61] p-6 text-4xl font-black leading-snug tracking-tight inline-block text-slate-900 md:text-5xl relative z-0"
+      >
+        <span
+          class="text-black bg-white pl-2 z-10 relative rounded-sm inline-block"
+        >
+          事務所づくり、レイアウト変更、
+        </span>
+        <span class="text-[#7BB2A2] bg-white pl-2 pr-4 block">
+          引っ越しのトータルサービス
+        </span>
+      </h1>
+      <div class="flex flex-col gap-2 items-start text-xl/10 tracking-widest">
+        <p
+          class="mt-8 font-bold bg-black/30 text-white px-8 pt-4_ inline-block"
+        >
+          士業事務所の開業から内装工事・レイアウトや
+        </p>
+        <p class="2 mt-0 font-bold bg-black/30 text-white px-8 inline-block">
+          家具のご提案廃棄・ 引っ越しまで。
+        </p>
+        <p
+          class="t mt-0 font-bold bg-black/30 text-white px-8 pb-4_ inline-block"
+        >
+          全工程をワンストップでお引き受けします
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

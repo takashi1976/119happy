@@ -1,17 +1,42 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Header from "../components/Header.astro";
-import HeroSection2 from "../components/HeroSection2.astro";
-import ProblemSection2 from "../components/ProblemSection2.astro";
-import Footer2 from "../components/Footer2.astro";
+
+const designPages = [
+  { title: "Design 01", path: "/design/" },
+  { title: "Design 02", path: "/design/index2" },
+  { title: "Design 03", path: "/design/index3" },
+  { title: "Design 04", path: "/design/index4" },
+  { title: "Design 05", path: "/design/index5" },
+  { title: "Design 06", path: "/design/index6" }
+];
 ---
 
 <BaseLayout
-  title="株式会社トミザワ | 士業専門 事務所づくりのトータルサービス"
-  description="士業専門の株式会社トミザワは、事務所づくり・レイアウト変更・引っ越しをトータルでご提供します。"
+  title="デザインページ一覧 | 株式会社トミザワ"
+  description="デザイン検証ページへのリンク集です。"
 >
-  <Header />
-  <HeroSection2 />
-  <ProblemSection2 />
-  <!--  <Footer2 />  -->
+  <main class="mx-auto max-w-3xl px-6 py-16">
+    <section class="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-200">
+      <p class="text-sm font-semibold tracking-wide text-emerald-700">
+        Design Index
+      </p>
+      <h1 class="mt-2 text-3xl font-bold text-slate-900">デザインページ一覧</h1>
+
+      <ul class="mt-8 grid gap-3">
+        {
+          designPages.map((page) => (
+            <li>
+              <a
+                href={page.path}
+                class="flex items-center justify-between rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-slate-800 transition hover:border-emerald-500 hover:bg-emerald-50"
+              >
+                <span class="font-medium">{page.title}</span>
+                <span class="text-sm text-slate-500">{page.path}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
 </BaseLayout>

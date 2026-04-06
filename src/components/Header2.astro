@@ -1,12 +1,12 @@
 ---
-
+import MailCatchIcon from "./design/MailCatchIcon.astro";
 ---
 
 <header
-  class="sticky top-0 z-100 border-b_ border-slate-200 bg-[#457163]_ bg-green-900 backdrop-blur-md"
+  class="sticky_ fixed w-full top-0 z-100 border-b_ border-slate-200 bg-[#7BB2A2]_ bg-[#7BB2A2] backdrop-blur-md"
 >
   <div
-    class="mx-auto flex h-16 w-full max-w-[1410px] items-center justify-between px-6"
+    class="mx-auto flex h-16 w-full max-w-full items-center justify-between pl-6"
   >
     <!-- Logo -->
     <a href="/" class="flex items-center">
@@ -18,7 +18,7 @@
     </a>
 
     <!-- Desktop Nav -->
-    <nav class="hidden items-center gap-8 md:flex">
+    <nav class="hidden items-center gap-4 md:flex h-16">
       <a href="tel:0120673119" class="flex flex-col items-start leading-tight">
         <div class="flex gap-2">
           <img src="/img/free-dial.svg" alt="" class="h-8" />
@@ -35,8 +35,9 @@
       </a>
       <a
         href="#contact"
-        class="inline-flex items-center rounded bg-[#fff] px-5 py-3 text-sm font-bold text-[#457163] transition-colors hover:bg-[#365a4e]"
+        class="inline-flex font-black items-center gap-2 bg-[#fff] h-16 px-10 py-3 text-xl text-[#7BB2A2] transition-colors hover:text-white hover:bg-[#365a4e]"
       >
+        <MailCatchIcon class="text-[#7BB2A2] hover:text-white" size={32} />
         無料相談・お見積り
       </a>
     </nav>

@@ -1,0 +1,61 @@
+---
+import BuildingsDuotone from "phosphor-astro/BuildingsDuotone.astro";
+import LightningDuotone from "phosphor-astro/LightningDuotone.astro";
+import TrophyDuotone from "phosphor-astro/TrophyDuotone.astro";
+
+const points2 = [
+  {
+    iconPath:
+      "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6",
+    text: '内装工事から家具の導入・買取・廃棄・<br />引っ越しまで<span class="text-[#7BB2A2]">トータル対応可能</span>'
+  },
+  {
+    iconPath: "M13 10V3L4 14h7v7l9-11h-7z",
+    text: '<span class="text-[#7BB2A2]">短納期、低単価</span>で事務所家具の導入可能'
+  },
+  {
+    iconPath:
+      "M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z",
+    text: 'オフィス移転事業<span class="text-[#7BB2A2]">40年以上の実績と信頼</span>'
+  }
+];
+
+const points = [
+  {
+    num: "01",
+    text: '内装工事から家具の導入・買取<br />廃棄・引っ越しまで<strong class="marker text-lg lg:text-xl! px-1 text-black font-black!">トータル対応</strong>'
+  },
+  {
+    num: "02",
+    text: '<strong class="marker text-lg lg:text-xl! px-1 text-black font-black!">短納期・低コスト</strong>で<br />事務所家具を迅速に導入'
+  },
+  {
+    num: "03",
+    text: 'オフィス移転40年以上の<br /><strong class="marker text-lg lg:text-xl! px-1 text-black font-black!">実績と信頼</strong>'
+  }
+];
+---
+
+<section class="py-0 pt-0 bg-white -mt-12 border-4 h-0 mb-64">
+  <!-- 3カラムポイント -->
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-3 max-w-[1210px] mx-auto">
+    {
+      points.map((p, i) => (
+        <div class="relative shadow-md overflow- rounded-lg  border-slate-100 bg-slate-50 px-6 py-7">
+          <span class="absolute top-4 right-5 text-4xl font-black text-[#B5C6C1] leading-none select-none">
+            {p.num}
+          </span>
+          <div class=" absolute top-0 left-1/2 -translate-x-1/2  -mt-6 text-[#E2E9E7] flex justify-center  z-10 bg-[#7BB2A2] size-24 items-center  backdrop-blur-sm rounded-full -translate-y-4">
+            {i === 0 && <BuildingsDuotone width={44} height={44} />}
+            {i === 1 && <LightningDuotone width={44} height={44} />}
+            {i === 2 && <TrophyDuotone width={44} height={44} />}
+          </div>
+          <p
+            class="relative text-sm mt-10 lg:text-lg leading-7  font-black text-center"
+            set:html={p.text}
+          />
+        </div>
+      ))
+    }
+  </div>
+</section>

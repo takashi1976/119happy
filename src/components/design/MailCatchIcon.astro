@@ -1,0 +1,17 @@
+---
+import EnvelopeDuotone from "phosphor-astro/EnvelopeDuotone.astro";
+
+interface Props {
+  class?: string;
+  size?: number;
+}
+
+const { class: className = "", size = 32 } = Astro.props;
+---
+
+<span
+  class:list={["inline-flex shrink-0 items-center justify-center", className]}
+  aria-hidden="true"
+>
+  <EnvelopeDuotone class="block" width={size} height={size} />
+</span>

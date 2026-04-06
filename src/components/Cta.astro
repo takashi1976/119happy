@@ -1,0 +1,31 @@
+---
+import MailCatchIcon from "./design/MailCatchIcon.astro";
+---
+
+<!-- Desktop Nav -->
+<nav class="flex justify-center items-center gap-16 md:flex p-24 bg-[#F2F2F0]">
+  <a
+    href="tel:0120673119"
+    class="flex flex-col bg-white items-start leading-tight scale-100 shadow-md p-4 px-12 h-32"
+  >
+    <div class="flex gap-2">
+      <img src="/img/free-dial_green.svg" alt="" class="h-16" />
+      <span
+        class="leading-none flex items-center tracking-wider gap-1.5 text-5xl font-black text-[#466C61]"
+        style="font-family: 'Oswald', sans-serif;"
+      >
+        0120-673-119
+      </span>
+    </div>
+    <p class="text-lg mt-0.5 font-normal text-slate-900">
+      受付時間10:00〜17:30（日曜・祝日除く）
+    </p>
+  </a>
+  <a
+    href="#contact"
+    class="inline-flex h-32 shadow-md items-center gap-3 rounded bg-[#466C61] px-12 py-6 text-3xl font-bold text-[#fff] transition-colors hover:bg-[#365a4e]"
+  >
+    <MailCatchIcon class="text-white" size={36} />
+    無料相談・お見積り
+  </a>
+</nav>
